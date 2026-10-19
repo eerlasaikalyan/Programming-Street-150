@@ -1,0 +1,16 @@
+48. function prime(num) {
+    let sum = 0
+    let i = 2;
+
+    while (i <= num) {
+        if (num % i === 0) {
+            sum += i;
+            while (num % i === 0) {
+                num = num / i;
+            }
+        }
+        i++;
+    }
+    return sum;    
+}
+console.log(prime(12));
